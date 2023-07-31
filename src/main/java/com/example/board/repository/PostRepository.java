@@ -4,7 +4,9 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
+
 import java.util.List;
+
 
 
 /**
@@ -12,6 +14,7 @@ import java.util.List;
  */
 @Repository
 public interface PostRepository extends JpaRepository<Post, Long> {
+
 	
 	 /**
 	    * IDで検索する
@@ -34,4 +37,5 @@ public interface PostRepository extends JpaRepository<Post, Long> {
 	    * @return 投稿のリスト
 	    */
 	    List<Post> findByDeletedFalseOrderByUpdatedDateDesc();
+
 }
