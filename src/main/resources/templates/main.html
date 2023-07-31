@@ -9,7 +9,8 @@
 			<dd>
 				<div><input type="text" th:field="*{author}" />
 					<span th:if="${#fields.hasErrors('author')}" th:errors="*{author}" th:errorclass="err" />
-				</div>
+
+
 			</dd>
 			<dt><label th:for="${#ids.next('title')}" class="required">タイトル</label></dt>
 			<dd>
@@ -29,7 +30,9 @@
 </form>
 <section id="posts">
 	<ul>
-		<li th:each="post : ${list}" th:unless="${post.deleted}">
+
+		<li th:each="post : ${list}">
+
 			<article class="post">
 				<ul>
 					<li>
